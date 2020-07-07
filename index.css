@@ -1,0 +1,177 @@
+#app{
+  padding-top: 3%;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+}
+
+.modButton {
+  width: 25%;
+  border: none;
+  background-color: #4CAF50;
+  padding: 3%;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10%;
+  margin-right: 1%;
+  color: ghostwhite;
+}
+
+
+.cancelButton {
+  width: 25%;
+  float:right;
+  border: none;
+  background-color: #DC143C;
+  color: ghostwhite;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10%;
+  margin-right: 5%;
+}
+
+.badgeButton{
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: ghostwhite;
+}
+#scanBadgeButton{
+  background-color: #4CAF50;
+  width: 50%;
+  padding: 5%;
+  margin-top: 1%;
+  font-size: 1.2em;
+}
+#refuseBadgeButton{
+  background-color: lightcoral;
+  width:30%;
+  padding:2%;
+  margin-top: 5%;
+  font-size: 0.85em;
+}
+
+.scanning .cancelButton {
+  float:left;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+.group{
+  border-bottom:0.5em solid #f6fbff;
+  display: -webkit-box;
+  justify-content: center;
+}
+.player{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.playerName{
+  margin-right: 5%;
+}
+.currentStatus{
+  width:60%;
+  display: flex;
+  justify-content: center;
+}
+.currentStatus button{
+  border: none;
+  background: none;
+}
+.cancelPlayer{
+  border: none;
+  background: none;
+}
+.currentStatus img{
+  max-height: 100px;
+}
+.playersQueue .empty{
+  font-size: 1.5em;
+}
+
+.readyToGo{
+  background-color: lightskyblue;
+}
+
+.groupPlaying{
+  background-color: lavender;
+}
+
+.inGame{
+  background-color: lightsalmon;
+}
+
+.players{
+  width: 40%;
+}
+.status{
+  width:30%;
+}
+
+.subscribe-form {
+  display: grid;
+}
+
+label{
+  width: 25%;
+  font-size: 1.25em;
+  display: inline-block;
+}
+
+.subscribe-form input{
+  width: 45%;
+  display: inline-block;
+  padding:0.5%;
+}
+
+#submitFormButton{
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: ghostwhite;
+  background-color: #4CAF50;
+  width: 50%;
+  padding: 1%;
+  margin-top: 3%;
+  font-size: 2em;
+}
+
+
+.title{
+  font-size: 3em;
+}
+
+.xPlayer{
+  font-size:1.5em;
+}
+
+img {
+    max-width: 100%;
+    height: inherit;
+    }
+
+.header{
+  height:100px;
+}
+
+.wallpaper{
+  background-image: "basketWallPaper.jpg";
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:13em;
+  z-index:-1;
+}
+
+footer img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
