@@ -23,6 +23,17 @@ new Vue({
   },
 
   methods: {
+
+    onDecodeTimeout(content){
+      document.getElementById("scanGif").style.display = "block";
+      var parent = this;
+      setTimeout(function () {
+        document.getElementById("scanGif").style.display = "none";
+        parent.onDecode(content);
+      }, 2000)
+
+    },
+
     //QR Scan decode
     onDecode(content) {
       if (content != ""){
@@ -38,6 +49,12 @@ new Vue({
             jsonData[kv[0]] = kv[1];
           }
         });
+        if(!jsonData["N"]){ // Not a QR from DevFest
+          jsonData["N"]="";
+          jsonData["FN"]="";
+          jsonData["ORG"]="";
+          jsonData["EMAIL"]="";
+        }
         jsonData["PSEUDO"]="";
         jsonData["GROUP"]=this.group;
         this.playerInfo = jsonData;

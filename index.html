@@ -15,7 +15,7 @@
 
   <body>
     <div class="header">
-      <img src="img/logoMicropole.jpg">
+      <img alt="Logo Micropole" src="img/logoMicropole.jpg">
     </div>
     <div id="app">
       <!-- IDLE page - Waiting for new subscribtions -->
@@ -32,7 +32,7 @@
               <button class="status" v-if="!playing" v-on:click="goPlay(group);">GO</button>
               <p class="status" v-else-if="group[0].PLAYING === true">En cours</p>
               <p class="status" v-else>En attente</p>
-              <img v-if="group[0].PLAYING === true" class="cancelPlayer" src="img/basketShoot.gif">
+              <img v-if="group[0].PLAYING === true" class="cancelPlayer" src="img/basketShoot.gif" alt="Basket Shoot Animation">
               <button v-else class="cancelPlayer" v-on:click="cancelGroup(group);">Cancel</button>
             </div>
           </div>
@@ -66,10 +66,11 @@
 
       <!-- SCANNING page - Qr scan decoding -->
       <div class="scanning" v-if="state === 'scanning'">
-        <div class="qrScan" v-if="state === 'scanning'">
+        <img id="scanGif" src="img/qrScancrop.gif" alt="qrScan Animation">
+        <div class="qrScan">
           <!-- <p>Decoded: <b>{{ playerInfo.N }}</b></p> -->
           <!-- <p class="error">{{ errorMessage }}  </p> -->
-          <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
+          <qrcode-stream @decode="onDecodeTimeout" @init="onInit"></qrcode-stream>
         </div>
         <button class="cancelButton"v-on:click="changeState('chooseBadge');">Annuler</button>
       </div>
@@ -102,6 +103,6 @@
     </div>
 
     <script src="index.js"></script>
-    <footer><img src="img/basketLogo.png"></footer>
+    <footer><img alt="Basket Logo" src="img/basketLogo.png"></footer>
   </body>
 </html>
